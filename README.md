@@ -1,37 +1,53 @@
-# Turborepo kitchen sink starter
+# retro
 
-This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
+A retro board
 
-## Using this example
+This project uses the following:
 
-Run the following command:
+- **TurboRepo** - https://turbo.build/repo - This is what manages all of our packages/apps in the monorepo.
+- **React** - https://reactjs.org/ - This is our frontend framework
+- **Express** - https://expressjs.com/ - This is our back end web framework
+- **SocketIO** - https://socket.io/ - This is our web socket framework to handle the live communication between users
+- **Vite** - https://vitejs.dev/ - This is our tool to handle the frontend building
+- **ESLint** - https://eslint.org/ - This lints our code using the rules we provide. We are using a Prettier plugin so it is aware of our Prettier rules
+- **Prettier** - https://prettier.io/ - This formats our code based on the rules we provide in the config file. This ensures code and formating.
 
-```sh
-npx create-turbo@latest -e kitchen-sink
+## Run Locally
+
+Install the dependencies
+
+```bash
+  npm install
 ```
 
-## What's inside?
+Run the development instance
 
-This Turborepo includes the following packages and apps:
+```bash
+  npm run dev
+```
 
-### Apps and Packages
+Run the Prettier code formatter
 
-- `api`: an [Express](https://expressjs.com/) server
-- `storefront`: a [Next.js](https://nextjs.org/) app
-- `admin`: a [Vite](https://vitejs.dev/) single page app
-- `blog`: a [Remix](https://remix.run/) blog
-- `logger`: isomorphic logger (a small wrapper around console.log)
-- `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
-- `scripts`: Jest and ESLint configurations
-- `tsconfig`: tsconfig.json;s used throughout the monorepo
+```bash
+  npm run format
+```
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+Run the ESLint code linter
 
-### Utilities
+```bash
+  npm run lint
+```
 
-This Turborepo has some additional tools already setup for you:
+Run the Tests
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+```bash
+  npm run test
+```
+
+## TODO
+
+- [ ] Build ability to have seperate rooms
+- [ ] User auth/login
+- [ ] User votes on cards
+- [ ] Automatic sorting of cards by color and votes
+- [ ] Databse persistence for card data
